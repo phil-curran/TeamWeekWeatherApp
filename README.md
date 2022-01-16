@@ -38,18 +38,15 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-- _Any known issues_
-- _should go here_
+- _No Known Issues_
 
 ## Contact Me
 
-_Let me know if you run into any issues or have questions, ideas or concerns:_
-_[Author Email Here]_
+_Please contact one of us if you run into any issues or have questions, ideas or concerns:_
+_[skelton.jt9@gmail.com, cnakayam@gmail.com, cdepastene@gmail.com, ebruerenb@gmail.com, pecurran@hotmail.com]_
 
 ## License
 
 MIT
-
-_{Please contact one of us with concerns or issues with this code. cnakayam@gmail.com, }_
 
 Copyright (c) _2022_Chris DePastene, Chris Nakayama, Ebru Rice, Jack Skelton, Phil Curran_
