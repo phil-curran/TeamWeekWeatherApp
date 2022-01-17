@@ -1,0 +1,16 @@
+.card {
+  padding: 1.5em 0.5em 0.5em;
+  border-radius: 2em;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  background-color: rgb(160, 203, 238);
+}
+
+.weatherIcon {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+}

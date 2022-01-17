@@ -1,5 +1,3 @@
-//api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=539b046093da5951bf4b62ac2300d7f7
-
 export default class WeatherData {
   static async getWeather(city) {
     try {
