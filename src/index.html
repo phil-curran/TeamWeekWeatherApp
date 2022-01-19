@@ -20,6 +20,24 @@
         </button>
       </div>
 
+      <script>
+        let autocomplete;
+        function initAutocomplete() {
+          autocomplete = new google.maps.places.Autocomplete(
+            document.getElementById("cityInput"),
+            {
+              types: ["(regions)"],
+            }
+          );
+        }
+      </script>
+
+      <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC88bVspYz0VMaIDpSRqgNZl0yPkEq3Rvw&libraries=places&callback=initAutocomplete"
+        defer
+        async
+      ></script>
+
       <!-- <label for="cityInput">Enter city:</label>
       <input type="text" id="cityInput" /><br /><br />
       <button class="btn btn-primary" id="checkWeatherButton">
