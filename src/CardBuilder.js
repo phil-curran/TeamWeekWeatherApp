@@ -1,40 +1,37 @@
+import moment from "moment";
 export default class CardBuilder {
   static async buildCard(dayData) {
     console.log(dayData);
+    console.log("Moment call: " + moment().format());
+
     let outerContainer = document.getElementById("showWeather");
 
-    let temp = new Date(dayData.list[0].dt_txt);
+    // let temp = new Date(dayData.list[0].dt_txt);
 
-    let newDiv = document.createElement("div");
-    let newDiv1 = document.createElement("div");
-    let newDiv2 = document.createElement("div");
-    let newDiv3 = document.createElement("div");
-    let newDiv4 = document.createElement("div");
+    for (let i = 0; i < dayData.list.length; i++) {
+      const time = "12:00:00";
+      if (dayData.list[i].dt_txt.includes(time)) {
+        let temp = moment(new Date(dayData.list[i].dt_txt)).format(
+          "dddd, MMM Do"
+        );
+        console.log(dayData.list[i]);
+        let newDiv = document.createElement("div");
+        newDiv.className = "card";
+        let imageID = getImageId(dayData.list[i].weather[0].id);
+        console.log(imageID);
+        newDiv.innerHTML += `<p class="text-center"><strong>${temp}</strong></p>`;
+        newDiv.innerHTML += `<img class="weatherIcon img-fluid" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
+        newDiv.innerHTML += `<p>Current Temp: ${dayData.list[i].main.temp}</p>`;
+        newDiv.innerHTML += `<p>High Temp: ${dayData.list[i].main.temp_max}</p>`;
+        newDiv.innerHTML += `<p>Low Temp: ${dayData.list[i].main.temp_min}</p>`;
+        newDiv.innerHTML += `<p>Current Weather: ${dayData.list[i].weather[0].main}</p>`;
+        newDiv.innerHTML += `<p>Description: ${dayData.list[i].weather[0].description}</p>`;
+        newDiv.innerHTML += `<p>Cloud Cover: ${dayData.list[i].clouds.all}%</p>`;
+        newDiv.innerHTML += `<p>Precipitation: ${dayData.list[i].pop}%</p>`;
 
-    newDiv.className = "card";
-    newDiv1.className = "card";
-    newDiv1.innerHTML += `<p>Date: ${temp}</p>`;
-    newDiv2.className = "card";
-    newDiv2.innerHTML += `<p>Date: ${temp}</p>`;
-    newDiv3.className = "card";
-    newDiv3.innerHTML += `<p>Date: ${temp}</p>`;
-    newDiv4.className = "card";
-    newDiv4.innerHTML += `<p>Date: ${temp}</p>`;
-
-    let imageID = getImageId(dayData.list[0].weather[0].id);
-    console.log(imageID);
-    newDiv.innerHTML += `<img class="weatherIcon img-fluid" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
-    newDiv.innerHTML += `<p>Date: ${temp}</p>`;
-    newDiv.innerHTML += `<p>Current Temp: ${dayData.list[0].main.temp}</p>`;
-    newDiv.innerHTML += `<p>High Temp: ${dayData.list[0].main.temp_max}</p>`;
-    newDiv.innerHTML += `<p>Low Temp: ${dayData.list[0].main.temp_min}</p>`;
-    newDiv.innerHTML += `<p>Current Weather: ${dayData.list[0].weather[0].main}</p>`;
-    newDiv.innerHTML += `<p>Description: ${dayData.list[0].weather[0].description}</p>`;
-    newDiv.innerHTML += `<p>Cloud Cover: ${dayData.list[0].clouds.all}%</p>`;
-    newDiv.innerHTML += `<p>Precipitation: ${dayData.list[0].pop}%</p>`;
-
-    outerContainer.append(newDiv, newDiv2, newDiv3, newDiv4);
-    outerContainer.append(newDiv1);
+        outerContainer.append(newDiv);
+      }
+    }
   }
 }
 
