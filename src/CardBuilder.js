@@ -6,8 +6,21 @@ export default class CardBuilder {
     let temp = new Date(dayData.list[0].dt_txt);
 
     let newDiv = document.createElement("div");
-    // newDiv.id = "showDayWeather";
+    let newDiv1 = document.createElement("div");
+    let newDiv2 = document.createElement("div");
+    let newDiv3 = document.createElement("div");
+    let newDiv4 = document.createElement("div");
+
     newDiv.className = "card";
+    newDiv1.className = "card";
+    newDiv1.innerHTML += `<p>Date: ${temp}</p>`;
+    newDiv2.className = "card";
+    newDiv2.innerHTML += `<p>Date: ${temp}</p>`;
+    newDiv3.className = "card";
+    newDiv3.innerHTML += `<p>Date: ${temp}</p>`;
+    newDiv4.className = "card";
+    newDiv4.innerHTML += `<p>Date: ${temp}</p>`;
+
     newDiv.innerHTML += `<p>Date: ${temp}</p>`;
     newDiv.innerHTML += `<p>Current temperature: ${dayData.list[0].main.temp}</p>`;
     newDiv.innerHTML += `<p>High Temp: ${dayData.list[0].main.temp_max}</p>`;
@@ -20,7 +33,8 @@ export default class CardBuilder {
     console.log(imageID);
     newDiv.innerHTML += `<img class="weatherIcon" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
 
-    outerContainer.append(newDiv);
+    outerContainer.append(newDiv, newDiv2, newDiv3, newDiv4);
+    outerContainer.append(newDiv1);
   }
 }
 
