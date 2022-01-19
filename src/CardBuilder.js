@@ -21,17 +21,17 @@ export default class CardBuilder {
     newDiv4.className = "card";
     newDiv4.innerHTML += `<p>Date: ${temp}</p>`;
 
+    let imageID = getImageId(dayData.list[0].weather[0].id);
+    console.log(imageID);
+    newDiv.innerHTML += `<img class="weatherIcon img-fluid" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
     newDiv.innerHTML += `<p>Date: ${temp}</p>`;
-    newDiv.innerHTML += `<p>Current temperature: ${dayData.list[0].main.temp}</p>`;
+    newDiv.innerHTML += `<p>Current Temp: ${dayData.list[0].main.temp}</p>`;
     newDiv.innerHTML += `<p>High Temp: ${dayData.list[0].main.temp_max}</p>`;
     newDiv.innerHTML += `<p>Low Temp: ${dayData.list[0].main.temp_min}</p>`;
     newDiv.innerHTML += `<p>Current Weather: ${dayData.list[0].weather[0].main}</p>`;
     newDiv.innerHTML += `<p>Description: ${dayData.list[0].weather[0].description}</p>`;
     newDiv.innerHTML += `<p>Cloud Cover: ${dayData.list[0].clouds.all}%</p>`;
     newDiv.innerHTML += `<p>Precipitation: ${dayData.list[0].pop}%</p>`;
-    let imageID = getImageId(dayData.list[0].weather[0].id);
-    console.log(imageID);
-    newDiv.innerHTML += `<img class="weatherIcon" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
 
     outerContainer.append(newDiv, newDiv2, newDiv3, newDiv4);
     outerContainer.append(newDiv1);

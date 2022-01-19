@@ -1,22 +1,17 @@
 #showWeather {
+  margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 1em;
 }
 
 .card {
-  padding: 1.5em 0.5em 0.5em;
-  border-radius: 2em;
-  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: left;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover {
   background-color: rgb(160, 203, 238);
-}
-
-.weatherIcon {
-  width: 100px;
-  height: 100px;
-  align-items: center;
 }

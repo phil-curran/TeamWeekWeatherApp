@@ -5,12 +5,26 @@
   </head>
   <body>
     <div class="container">
-      <h1>Check Weather</h1>
-      <label for="cityInput">Enter city:</label>
+      <h1 class="text-center">Check Weather</h1>
+
+      <div class="input-group mb-3">
+        <input
+          id="cityInput"
+          type="text"
+          class="form-control"
+          placeholder="Enter city:"
+          aria-label="Enter your city"
+        />
+        <button class="btn btn-primary" type="button" id="checkWeatherButton">
+          Get forecast
+        </button>
+      </div>
+
+      <!-- <label for="cityInput">Enter city:</label>
       <input type="text" id="cityInput" /><br /><br />
       <button class="btn btn-primary" id="checkWeatherButton">
         Check Weather
-      </button>
+      </button> -->
       <div id="showWeather"></div>
 
       <!-- <div class="modal fade" id="modal">
