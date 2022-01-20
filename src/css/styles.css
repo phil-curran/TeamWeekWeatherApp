@@ -1,14 +1,29 @@
+html {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0px;
+  min-height: 100%;
+  width: 100%;
+  background: linear-gradient(to top, #f8d0a8, #ffffff);
+  background-repeat: none;
+}
+
 #showWeather {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 1em;
 }
 
 .card {
   padding: 1rem;
+  opacity: 0.8;
   border-radius: 4px;
-  text-align: left;
+  text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
