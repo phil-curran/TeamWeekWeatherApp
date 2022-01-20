@@ -1,33 +1,42 @@
 import moment from "moment";
 export default class CardBuilder {
-  static async buildCard(dayData) {
-    console.log(dayData);
-    console.log("Moment call: " + moment().format());
-
+  static async buildCard(dayData, weekData) {
     let outerContainer = document.getElementById("showWeather");
 
-    // let temp = new Date(dayData.list[0].dt_txt);
+    let newDayDiv = document.createElement("div");
+    newDayDiv.className = "card";
+    let dayDate = moment(new Date()).format("dddd, MMM Do");
+    let imageDayID = getImageId(dayData.weather[0].id);
+    console.log(imageDayID);
+    newDayDiv.innerHTML += `<p class="text-center"><strong>${dayDate}</strong></p>`;
+    newDayDiv.innerHTML += `<img class="weatherIcon img-fluid" src='http://openweathermap.org/img/wn/${imageDayID}d@2x.png' />`;
+    newDayDiv.innerHTML += `<p>Current Temp: ${dayData.main.temp}</p>`;
+    newDayDiv.innerHTML += `<p>High Temp: ${dayData.main.temp_max}</p>`;
+    newDayDiv.innerHTML += `<p>Low Temp: ${dayData.main.temp_min}</p>`;
+    outerContainer.append(newDayDiv);
 
-    for (let i = 0; i < dayData.list.length; i++) {
+    for (let i = 0; i < weekData.list.length; i++) {
       const time = "12:00:00";
-      if (dayData.list[i].dt_txt.includes(time)) {
-        let temp = moment(new Date(dayData.list[i].dt_txt)).format(
+      if (weekData.list[i].dt_txt.includes(time)) {
+        let date = moment(new Date(weekData.list[i].dt_txt)).format(
           "dddd, MMM Do"
         );
-        console.log(dayData.list[i]);
+        // let newModal = document.getElementsByClassName("modal");
+        // newModal.innerHTML += `<p>Precipitation: ${weekData.list[i].pop}%</p>`;
+
         let newDiv = document.createElement("div");
         newDiv.className = "card";
-        let imageID = getImageId(dayData.list[i].weather[0].id);
-        console.log(imageID);
-        newDiv.innerHTML += `<p class="text-center"><strong>${temp}</strong></p>`;
+        newDiv.id = "something dynamic";
+        let imageID = getImageId(weekData.list[i].weather[0].id);
+        newDiv.innerHTML += `<p class="text-center"><strong>${date}</strong></p>`;
         newDiv.innerHTML += `<img class="weatherIcon img-fluid" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
-        newDiv.innerHTML += `<p>Current Temp: ${dayData.list[i].main.temp}</p>`;
-        newDiv.innerHTML += `<p>High Temp: ${dayData.list[i].main.temp_max}</p>`;
-        newDiv.innerHTML += `<p>Low Temp: ${dayData.list[i].main.temp_min}</p>`;
-        newDiv.innerHTML += `<p>Current Weather: ${dayData.list[i].weather[0].main}</p>`;
-        newDiv.innerHTML += `<p>Description: ${dayData.list[i].weather[0].description}</p>`;
-        newDiv.innerHTML += `<p>Cloud Cover: ${dayData.list[i].clouds.all}%</p>`;
-        newDiv.innerHTML += `<p>Precipitation: ${dayData.list[i].pop}%</p>`;
+        newDiv.innerHTML += `<p>High Temp: ${weekData.list[i].main.temp_max}</p>`;
+        newDiv.innerHTML += `<p>Low Temp: ${weekData.list[i].main.temp_min}</p>`;
+        newDiv.innerHTML += `<p>${weekData.list[i].weather[0].main}</p>`;
+        newDiv.innerHTML += ` <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#myModal">Launch modal</button>`;
+
+        // newDiv.innerHTML += `<p>Description: ${weekData.list[i].weather[0].description}</p>`;
+        // newDiv.innerHTML += `<p>Cloud Cover: ${weekData.list[i].clouds.all}%</p>`;
 
         outerContainer.append(newDiv);
       }
