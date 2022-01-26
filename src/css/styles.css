@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  background: linear-gradient(to top, #4589c9, #292b2c13);
   --accent-color: #292b2c;
   --background-color: #f7f7f7;
   --text-color: #292b2c;
@@ -41,19 +42,21 @@ body.dark {
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   color: #292b2c;
+  --border-size: 3px;
 }
 
 #today {
   color: #292b2c;
+  top: 25%;
 }
-
-#myModal0 {
+.modal-style {
   color: #292b2c;
+  top: 25%;
 }
 
 .card:hover {
-  background-color: rgb(210, 222, 233);
-  border: 10px;
+  background-color: rgb(223, 233, 255);
+  border: var(--border-size) solid;
   border-color: #f7f7f7;
 }
 
