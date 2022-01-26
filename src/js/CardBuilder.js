@@ -45,6 +45,11 @@ export default class CardBuilder {
       `${dayData.main.humidity}%` +
       "</p>" +
       "</div>" +
+      '<div class="modal-footer">' +
+      '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
+      "Close" +
+      "</button>" +
+      "</div>" +
       "</div>" +
       "</div>";
     outerContainer.append(newDayDiv, modal);
@@ -61,6 +66,7 @@ export default class CardBuilder {
         newDiv.setAttribute("data-bs-toggle", "modal");
         newDiv.setAttribute("data-bs-target", `#myModal${i}`);
         modal.setAttribute("id", `myModal${i}`);
+        modal.setAttribute("class", "modal-style");
         modal.classList.add("modal", "fade");
         modal.setAttribute("role", "dialog");
 
@@ -86,6 +92,11 @@ export default class CardBuilder {
           "Precipitation: " +
           `${weekData.list[i].pop}%` +
           "</p>" +
+          "</div>" +
+          '<div class="modal-footer">' +
+          '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
+          "Close" +
+          "</button>" +
           "</div>" +
           "</div>" +
           "</div>";
