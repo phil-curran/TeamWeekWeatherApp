@@ -21,7 +21,7 @@ body {
 }
 
 body.dark {
-  --accent-color: #FFD369;
+  --accent-color: #ffd369;
   --background-color: #292b2c;
   --text-color: #f7f7f7;
 }
@@ -30,6 +30,7 @@ body.dark {
   margin-top: 25px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: minmax(300px, auto);
   grid-gap: 1em;
 }
 
@@ -40,12 +41,20 @@ body.dark {
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   color: #292b2c;
-  margin: auto;
-  margin-bottom: 10px;
+}
+
+#today {
+  color: #292b2c;
+}
+
+#myModal0 {
+  color: #292b2c;
 }
 
 .card:hover {
-  background-color: rgb(160, 203, 238);
+  background-color: rgb(210, 222, 233);
+  border: 10px;
+  border-color: #f7f7f7;
 }
 
 /* dark mode theme button */
