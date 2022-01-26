@@ -5,11 +5,25 @@ html {
 }
 
 body {
+  --accent-color: #292b2c;
+  --background-color: #f7f7f7;
+  --text-color: #292b2c;
+  --button-text-color: var(--background-color);
+  --transition-delay: 1s;
+
   margin: 0px;
   min-height: 100%;
   width: 100%;
-  background: linear-gradient(to top, #f8d0a8, #ffffff);
-  background-repeat: none;
+
+  transition: var(--transition-delay);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --accent-color: #FFD369;
+  --background-color: #292b2c;
+  --text-color: #f7f7f7;
 }
 
 #showWeather {
@@ -25,8 +39,28 @@ body {
   border-radius: 4px;
   text-align: center;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #292b2c;
+  margin: auto;
+  margin-bottom: 10px;
 }
 
 .card:hover {
   background-color: rgb(160, 203, 238);
+}
+
+/* dark mode theme button */
+.theme-toggle-button {
+  background-color: var(--accent-color);
+  color: var(--button-text-color);
+
+  cursor: pointer;
+  padding: 13px;
+  border-radius: 100%;
+  border: none;
+  outline: none;
+  transition: var(--transition-delay);
+  transform: scale(1);
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
