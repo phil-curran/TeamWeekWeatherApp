@@ -12,7 +12,7 @@ export default class CardBuilder {
     let icon = IconPicker.findIcon(dayData.weather[0].description);
     newDayDiv.innerHTML += `<p class="text-center"><strong>${dayDate}</strong></p>`;
     newDayDiv.innerHTML += `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/${icon}" />`;
-    newDayDiv.innerHTML += `<p>Current Temp: ${dayData.main.temp}</p>`;
+    newDayDiv.innerHTML += `<p class ="tempStyle">${dayData.main.temp}</p>`;
     newDayDiv.innerHTML += `<p>High Temp: ${dayData.main.temp_max}</p>`;
     newDayDiv.innerHTML += `<p>Low Temp: ${dayData.main.temp_min}</p>`;
     let modal = document.createElement("div");
@@ -101,7 +101,7 @@ export default class CardBuilder {
         let icon = IconPicker.findIcon(weekData.list[i].weather[0].description);
         console.log(icon);
         newDiv.innerHTML += `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/${icon}" />`;
-        newDiv.innerHTML += `<p>High Temp: ${weekData.list[i].main.temp_max}</p>`;
+        newDiv.innerHTML += `<p class ="tempStyle"> ${weekData.list[i].main.temp_max}</p>`;
         newDiv.innerHTML += `<p>Low Temp: ${weekData.list[i].main.temp_min}</p>`;
         newDiv.innerHTML += `<p>${weekData.list[i].weather[0].main}</p>`;
 

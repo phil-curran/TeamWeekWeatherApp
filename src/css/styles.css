@@ -57,6 +57,10 @@ body.dark {
   color: #292b2c;
   top: 25%;
 }
+.tempStyle {
+  font-size: 40px;
+  font-style: bold;
+}
 
 .card:hover {
   background-color: rgb(223, 233, 255);
