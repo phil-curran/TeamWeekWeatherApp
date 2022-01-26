@@ -2,6 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
+
 module.exports = {
   entry: "./src/js/index.js",
   output: {
@@ -38,8 +39,8 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              name: "[name].[ext]",
-              outputPath: "assets/images/",
+              name: "[path][name].[ext]",
+              outputPath: "./assets/",
             },
           },
         ],

@@ -1,5 +1,5 @@
 import moment from "moment";
-// import IconPicker from "./IconPicker";
+import IconPicker from "./IconPicker";
 
 export default class CardBuilder {
   static async buildCard(dayData, weekData) {
@@ -9,12 +9,11 @@ export default class CardBuilder {
     newDayDiv.setAttribute("data-bs-toggle", "modal");
     newDayDiv.setAttribute("data-bs-target", "#today");
     let dayDate = moment(new Date()).format("dddd, MMM Do");
-    let imageDayID = getImageId(dayData.weather[0].id);
-    // console.log(imageDayID);
-    // let icon = IconPicker.findIcon(dayData.weather[0].description);
-    // newDayDiv.innerHTML += `<img class="weatherIcon img-fluid" src="./assets/icons/${icon}" />`;
     newDayDiv.innerHTML += `<p class="text-center"><strong>${dayDate}</strong></p>`;
-    newDayDiv.innerHTML += `<img class="weatherIcon" src='http://openweathermap.org/img/wn/${imageDayID}d@2x.png' />`;
+
+    let icon = IconPicker.findIcon(dayData.weather[0].description);
+    console.log("Day one: " + icon);
+    newDayDiv.innerHTML += `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/${icon}" />`;
     newDayDiv.innerHTML += `<p>Current Temp: ${dayData.main.temp}</p>`;
     newDayDiv.innerHTML += `<p>High Temp: ${dayData.main.temp_max}</p>`;
     newDayDiv.innerHTML += `<p>Low Temp: ${dayData.main.temp_min}</p>`;
@@ -91,10 +90,8 @@ export default class CardBuilder {
           "</div>";
         let imageID = getImageId(weekData.list[i].weather[0].id);
         newDiv.innerHTML += `<p class="text-center"><strong>${date}</strong></p>`;
-        // let icon = IconPicker.findIcon(weekData.list[i].weather[0].description);
-        // console.log("CardBuilder: " + icon);
-        // newDiv.innerHTML += `<img class="weatherIcon img-fluid" src="../assets/${icon}" />`;
-        newDiv.innerHTML += `<img class="weatherIcon" src='http://openweathermap.org/img/wn/${imageID}d@2x.png' />`;
+        let icon = IconPicker.findIcon(weekData.list[i].weather[0].description);
+        newDiv.innerHTML += `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/${icon}" />`;
         newDiv.innerHTML += `<p>High Temp: ${weekData.list[i].main.temp_max}</p>`;
         newDiv.innerHTML += `<p>Low Temp: ${weekData.list[i].main.temp_min}</p>`;
         newDiv.innerHTML += `<p>${weekData.list[i].weather[0].main}</p>`;
