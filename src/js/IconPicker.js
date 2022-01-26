@@ -153,7 +153,7 @@ export default class IconPicker {
         icon = "tornado.svg";
         break;
       case "clear sky":
-        icon = "clear-night.svg";
+        icon = "clear-day.svg";
         break;
       case "few clouds: 11-25%":
         icon = "partly-cloudy-night.svg";

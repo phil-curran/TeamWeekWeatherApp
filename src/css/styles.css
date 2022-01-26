@@ -5,7 +5,11 @@ html {
 }
 
 body {
-  background: linear-gradient(to top, #4589c9, #292b2c13);
+  background: linear-gradient(
+    to top,
+    rgba(69, 137, 201, 1) 0%,
+    rgba(247, 247, 247, 0) 65%
+  );
   --accent-color: #292b2c;
   --background-color: #f7f7f7;
   --text-color: #292b2c;
