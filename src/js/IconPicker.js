@@ -42,25 +42,25 @@ export default class IconPicker {
         icon = "extreme-drizzle.svg";
         break;
       case "light intensity drizzle rain":
-        icon = "drizzle.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "drizzle rain":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "heavy intensity drizzle rain":
         icon = "extreme-drizzle.svg";
         break;
       case "shower rain and drizzle":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "heavy shower rain and drizzle":
         icon = "extreme-drizzle.svg";
         break;
       case "shower drizzle":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "light rain":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "moderate rain":
         icon = "rain.svg";
@@ -78,10 +78,10 @@ export default class IconPicker {
         icon = "extreme-night-sleet.svg";
         break;
       case "light intensity shower rain":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "shower rain":
-        icon = "rain.svg";
+        icon = "overcast-day-drizzle.svg";
         break;
       case "heavy intensity shower rain":
         icon = "extreme-night-rain.svg";
