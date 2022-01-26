@@ -24,9 +24,9 @@ function getElements(response2, response) {
 }
 
 // UI Logic
-document.querySelector('.theme-toggle-button').addEventListener('click', () => {
-  document.body.classList.toggle('dark')
-})
+document.querySelector(".theme-toggle-button").addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
 $(document).ready(function () {
   $("#checkWeatherButton").click(function () {
