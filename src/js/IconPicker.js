@@ -155,17 +155,17 @@ export default class IconPicker {
       case "clear sky":
         icon = "clear-day.svg";
         break;
-      case "few clouds: 11-25%":
-        icon = "partly-cloudy-night.svg";
+      case "few clouds":
+        icon = "few-clouds.svg";
         break;
-      case "scattered clouds: 25-50%":
-        icon = "partly-cloudy-night.svg";
+      case "scattered clouds":
+        icon = "few-clouds.svg";
         break;
-      case "broken clouds: 51-84%":
-        icon = "overcast-night.svg";
+      case "broken clouds":
+        icon = "few-clouds.svg";
         break;
-      case "overcast clouds: 85-100%":
-        icon = "overcast-night.svg";
+      case "overcast clouds":
+        icon = "overcast-clouds.svg";
         break;
       default:
         icon = "clear-day.svg";
