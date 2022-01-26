@@ -31,18 +31,27 @@ export default class CardBuilder {
       '<button type="button" class="btn-close" data-bs-dismiss="modal"></button>' +
       "</div>" +
       '<div class="modal-body" id="modal-body">' +
+      '<div class="modalClouds">' +
+      `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/overcast.svg" />` +
       "<p>" +
       "Cloud Coverage: " +
       `${dayData.clouds.all}%` +
       "</p>" +
+      "</div>" +
+      '<div class="modalWind">' +
+      `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/wind.svg" />` +
       "<p>" +
       "Wind Speed: " +
       `${dayData.wind.speed} mph` +
       "</p>" +
+      "</div>" +
+      '<div class="modalHumidity">' +
+      `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/humidity.svg" />` +
       "<p>" +
       "Humidity " +
       `${dayData.main.humidity}%` +
       "</p>" +
+      "</div>" +
       "</div>" +
       '<div class="modal-footer">' +
       '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
@@ -79,18 +88,27 @@ export default class CardBuilder {
           '<button type="button" class="btn-close" data-bs-dismiss="modal"></button>' +
           "</div>" +
           '<div class="modal-body" id="modal-body">' +
+          '<div class="modalClouds">' +
+          `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/overcast.svg" />` +
           "<p>" +
           "Cloud Coverage: " +
           `${weekData.list[i].clouds.all}%` +
           "</p>" +
+          "</div>" +
+          '<div class="modalWind">' +
+          `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/wind.svg" />` +
           "<p>" +
           "Wind Speed: " +
           `${weekData.list[i].wind.speed} mph` +
           "</p>" +
+          "</div>" +
+          '<div class="modalHumidity">' +
+          `<img class="weatherIcon img-fluid" type="image/svg+xml" src="../../assets/icons/humidity.svg" />` +
           "<p>" +
-          "Precipitation: " +
-          `${weekData.list[i].pop}%` +
+          "Humidity: " +
+          `${weekData.list[i].main.humidity}%` +
           "</p>" +
+          "</div>" +
           "</div>" +
           '<div class="modal-footer">' +
           '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
