@@ -1,8 +1,7 @@
 import $ from "jquery";
-import "bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import "./css/styles.css";
+import "../css/styles.css";
 import WeatherData3, { WeatherData2, WeatherData } from "./weather-service.js";
 import CardBuilder from "./CardBuilder.js";
 
