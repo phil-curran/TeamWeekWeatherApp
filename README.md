@@ -36,9 +36,14 @@ If you are a Mac user, replace the & in package.json with a ; "start": "npm run 
 creat a .gitignore file and write in the following:
 node_modules/ .DS_Store dist/ coverage/ .env
 
-Make a .env file (and BE SURE it is added to gitignore below coverage/) and enter API_KEY = {YOUR API KEY HERE} - NOTE: It is crucial to complete this step and be sure your API key is never directly referenced in your javascript file
+Sign up for a free account and secure an API KEY at: https://openweathermap.org/api.
 
-IMPORTANT - Your API requests are limited if you are using the free version.
+
+In your root directory, Make a .env file (and BE SURE it is added to gitignore below coverage/) and enter API_KEY = {YOUR API KEY HERE} - NOTE: It is crucial to complete this step and be sure your API key is never directly referenced in your javascript file. 
+This API KEY will be from: https://openweathermap.org/api.  
+
+This program requires an API key for GOOGLE to be installed in the HTML code in order to search cities properly. Secure an API Key for GOOGLE Maps and install key inside line 36 on index.html.
+
 
 Update your package.json by running $ npm run build in your terminal of choice and verifying there are no errors
 
@@ -48,7 +53,7 @@ run $ npm run start to bring up a live server in your browser (Google Chrome pre
 
 - _No Known Issues_
 
-## Contact Me
+## Contact 
 
 _Please contact one of us if you run into any issues or have questions, ideas or concerns:_
 _[skelton.jt9@gmail.com, cnakayam@gmail.com, cdepastene@gmail.com, ebruerenb@gmail.com, pecurran@hotmail.com]_
