@@ -53,11 +53,6 @@ export default class CardBuilder {
       "</p>" +
       "</div>" +
       "</div>" +
-      '<div class="modal-footer">' +
-      '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
-      "Close" +
-      "</button>" +
-      "</div>" +
       "</div>" +
       "</div>";
     outerContainer.append(newDayDiv, modal);
@@ -109,11 +104,6 @@ export default class CardBuilder {
           `${weekData.list[i].main.humidity}%` +
           "</p>" +
           "</div>" +
-          "</div>" +
-          '<div class="modal-footer">' +
-          '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' +
-          "Close" +
-          "</button>" +
           "</div>" +
           "</div>" +
           "</div>";

@@ -58,6 +58,12 @@ body.dark {
   top: 25%;
 }
 
+.modal-title {
+  font-size: 40px;
+  font-style: bold;
+  text-align: center;
+}
+
 .modal-body {
   background: linear-gradient(
     to top,
