@@ -36,8 +36,8 @@ export default class CardBuilder {
       `${dayData.clouds.all}%` +
       "</p>" +
       "<p>" +
-      "Description: " +
-      `${dayData.weather[0].description}` +
+      "Wind Speed: " +
+      `${dayData.wind.speed} mph` +
       "</p>" +
       "<p>" +
       "Humidity " +
@@ -84,8 +84,8 @@ export default class CardBuilder {
           `${weekData.list[i].clouds.all}%` +
           "</p>" +
           "<p>" +
-          "Description: " +
-          `${weekData.list[i].weather[0].description}` +
+          "Wind Speed: " +
+          `${weekData.list[i].wind.speed} mph` +
           "</p>" +
           "<p>" +
           "Precipitation: " +

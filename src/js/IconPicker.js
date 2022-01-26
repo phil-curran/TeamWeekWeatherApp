@@ -165,7 +165,7 @@ export default class IconPicker {
         icon = "few-clouds.svg";
         break;
       case "overcast clouds":
-        icon = "overcast-clouds.svg";
+        icon = "overcast.svg";
         break;
       default:
         icon = "clear-day.svg";
