@@ -36,9 +36,16 @@ If you are a Mac user, replace the & in package.json with a ; "start": "npm run 
 creat a .gitignore file and write in the following:
 node_modules/ .DS_Store dist/ coverage/ .env
 
+Open a free account at: https://openweathermap.org/api/one-call-api.
+
+Obtain an API KEY from the above website.
+
 Make a .env file (and BE SURE it is added to gitignore below coverage/) and enter API_KEY = {YOUR API KEY HERE} - NOTE: It is crucial to complete this step and be sure your API key is never directly referenced in your javascript file
 
-IMPORTANT - Your API requests are limited if you are using the free version.
+IMPORTANT - Your API requests are limited if you are using the free version on https://openweathermap.org/api/one-call-api.
+
+Obtain an API key for GOOGLE Maps.
+We have a line of code in index.html that needs an API key to perform the search function for the APP. Do not store this key anywhere else and delete it if you push anything to GITHUB. The line to inject the API key for GOOGLE maps is line 40 just after the = sign.
 
 Update your package.json by running $ npm run build in your terminal of choice and verifying there are no errors
 
